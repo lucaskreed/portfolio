@@ -8,6 +8,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Lucas Reed's Portfolio</title>
    <link rel="stylesheet" href="styles.css">
+   
  </head>
  <body>
    
@@ -16,7 +17,7 @@
       <button class="navbar-toggle" id="navbar-toggle">&#9776;</button> <!-- Hamburger button -->
       <ul class="navbar-links" id="navbar-links">
         <li><a href="#cover">Home</a></li>
-        <li><a href="#sticky-notes-grid" data-offset="100">My Snapshot</a></li>
+        <li><a href="#sticky-notes-grid" data-offset="50">My Snapshot</a></li>
         <li><a href="#timeline">Featured Projects</a></li>
         <li><a href="#footer" data-offset="50">Timeline</a></li>
       </ul>
@@ -36,25 +37,38 @@
   * Sticky Notes Grid Section
   *********************************************************************** -->
   <div id="sticky-notes-grid" class="sticky-notes-grid">
-    <!-- Sticky Note Item 1: Goals -->
-    <div class="sticky-note" id="goals">
-      <div class="section-header">Goals</div>
-      <div class="section-details">
-        <ul>
-          <li>Build a portfolio with diverse web projects.</li>
-          <li>Expand knowledge in backend development.</li>
-          <li>Collaborate in open-source projects.</li>
-        </ul>
-      </div>
+<!-- Sticky Note Item 1: Goals -->
+<div class="sticky-note" id="goals">
+  <div class="goals-header">Goals</div>
+  <div class="goals-details">
+    <ul class="goals-list" style="list-style-type: disc; padding-left: 20px; margin-top: 15px;">
+      <li style="border-bottom: 2px dashed #ff6b00; padding-bottom: 10px;"><i class="fa-solid fa-circle" style="color: #ff6b00; font-size: 1.5em; margin-right: 10px;"></i> Build a portfolio with diverse web projects showcasing front-end and full-stack development.</li>
+      <li style="border-bottom: 2px dashed #ff6b00; padding-bottom: 10px;"><i class="fa-solid fa-circle" style="color: #ff6b00; font-size: 1.5em; margin-right: 10px;"></i> Improve skills in HTML, CSS, and Python.</li>
+      <li style="border-bottom: 2px dashed #ff6b00; padding-bottom: 10px;"><i class="fa-solid fa-circle" style="color: #ff6b00; font-size: 1.5em; margin-right: 10px;"></i> Learn React to enhance front-end development capabilities.</li>
+      <li style="border-bottom: 2px dashed #ff6b00; padding-bottom: 10px;"><i class="fa-solid fa-circle" style="color: #ff6b00; font-size: 1.5em; margin-right: 10px;"></i> Contribute to open-source projects to enhance collaboration and problem-solving skills.</li>
+      <li style="border-bottom: none; padding-bottom: 0;"><i class="fa-solid fa-circle" style="color: #ff6b00; font-size: 1.5em; margin-right: 10px;"></i> Explore and practice backend development concepts.</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+    
+
+
+    
+  <!-- Sticky Note Item 2: About Me -->
+  <div class="sticky-note" id="about-me">
+    <div class="section-header">About Me</div>
+    <div class="section-details">
+      <!-- Profile photo -->
+      <img src="https://lh3.googleusercontent.com/eiTPbu3-isHTo2HhaVtrxd6dRifQLox-YEjOFzW95eEyQfBnEjIeCbSEx6tyqjss7dE4E5uuT_2hgXkxvyaeN8uaj-TI3hcmdJyIEgT5lUwdgk47_Hl7ruBtbGVc-Mg8Og=w1280" alt="Profile Photo" class="profile-photo">
+      <p>Hello! I'm Lucas, a passionate <strong>16-year-old web developer</strong> focused on creating clean, responsive websites that provide seamless user experiences. I specialize in front-end development, with a strong understanding of <strong>HTML, CSS, and JavaScript</strong>. Currently, I’m expanding my expertise in full-stack development and am eager to enhance my skills in backend technologies.</p>
     </div>
-  
-    <!-- Sticky Note Item 2: About Me -->
-    <div class="sticky-note" id="about-me">
-      <div class="section-header">About Me</div>
-      <div class="section-details">
-        <p>I'm a passionate web developer focused on building clean, responsive websites. I specialize in front-end development and enjoy creating intuitive user interfaces. Currently, I'm expanding my expertise in full-stack development.</p>
-      </div>
-    </div>
+  </div>
+
   
     <!-- Sticky Note Item 3: Awards -->
     <div class="sticky-note" id="awards">
@@ -67,18 +81,19 @@
       </div>
     </div>
   
-    <!-- Sticky Note Item 4: Skills -->
-    <div class="sticky-note" id="skills">
-      <div class="section-header">Skills</div>
-      <div class="section-details">
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>React, Node.js, Express</li>
-          <li>MongoDB, SQL</li>
-          <li>AWS, Git, Docker</li>
-        </ul>
-      </div>
+  <!-- Sticky Note Item 4: Skills -->
+  <div class="sticky-note" id="skills">
+    <div class="section-header">Skills</div>
+    <div class="section-details">
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Lua, Python</li>
+        <li>GitHub</li>
+        <li>Fusion 360, Blender</li>
+      </ul>
     </div>
+  </div>
+
   
     <!-- Sticky Note Item 5: Contacts -->
     <div class="sticky-note" id="contacts">
@@ -155,15 +170,19 @@
        </div>
      </div>
  
-     <!-- Final Project Section -->
-     <div class="timeline-item final-project-section">
-       <div class="date">December 20, 2025</div>
-       <div class="details">
-         <h3>Final Project: Job Listing Platform</h3>
-         <p>Developed a full-stack job listing platform using MongoDB, Express, React, and Node.js.</p>
-       </div>
-     </div>
-   </div>
+<!-- Final Project Section -->
+<div class="timeline-item final-project-section">
+  <div class="date">May 20, 2020</div>
+  <div class="details">
+    <h3>
+      Started Learning JavaScript
+      <img src="https://i.ibb.co/S3G0N7P/Java-Scipt-Logo-PNG.png" alt="JavaScript Logo" style="width: 30px; height: auto; vertical-align: middle; margin-left: 10px;">
+    </h3>
+    <p>Made a fully functional Automatic Bedrock Minecraft Server using commands.</p>
+    <p>Watch the trailer: <a href="https://www.youtube.com/watch?v=xJN2I82bRkc" target="_blank" rel="noopener noreferrer">YouTube Trailer</a></p>
+  </div>
+</div>
+</div>
  
  <!-- ***********************************************************************
   * Footer Section
