@@ -1,34 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Reed's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <div class="header-content">
-      <h1>Lucas Reed's Portfolio</h1>
-      <p>Your journey as a developer</p>
-    </div>
-  </header>
-
-  <div class="timeline">
-    <!-- About Me Section -->
-    <div class="timeline-item left about-section" style="border: 2px solid #2c3e50; padding: 20px; border-radius: 8px; background-color: #ecf0f1; color: #2c3e50;">
-      <div class="date" data-date="2024-01-15">About Me</div>
-      <div class="details">
-        <h3>Introduction to Web Development</h3>
-        <p>My first step in web development, learning the fundamentals of HTML.</p>
+<!-- ***********************************************************************
+ * Header Section
+ *********************************************************************** -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lucas Reed's Portfolio</title>
+   <link rel="stylesheet" href="styles.css">
+ </head>
+ <body>
+   
+   <header>
+     <nav class="navbar">
+       <ul class="navbar-links">
+         <li><a href="#cover">Home</a></li>
+         <li><a href="#sticky-notes-grid">Sticky Notes</a></li>
+         <li><a href="#timeline">Featured Projects</a></li>
+         <li><a href="#footer">Timeline</a></li>
+       </ul>
+     </nav>
+   </header>
+ 
+ <!-- ***********************************************************************
+  * Cover Section
+  *********************************************************************** -->
+   <div id="cover" class="cover">
+     <h1>Lucas Reed</h1>
+     <p>Web Developer & Aspiring Software Engineer</p>
+   </div>
+ 
+ <!-- ***********************************************************************
+  * Sticky Notes Grid Section
+  *********************************************************************** -->
+  <div id="sticky-notes-grid" class="sticky-notes-grid">
+    <!-- Sticky Note Item 1: Goals -->
+    <div class="sticky-note" id="goals">
+      <div class="section-header">Goals</div>
+      <div class="section-details">
+        <ul>
+          <li>Build a portfolio with diverse web projects.</li>
+          <li>Expand knowledge in backend development.</li>
+          <li>Collaborate in open-source projects.</li>
+        </ul>
       </div>
     </div>
-
-    <!-- Skills Section -->
-    <div class="timeline-item right skills-section" style="border: 2px solid #3498db; padding: 20px; border-radius: 8px; background-color: #f0f8ff; color: #2c3e50;">
-      <div class="date" data-date="2024-03-01">Skills</div>
-      <div class="details">
-        <h3>Technical Skills</h3>
+  
+    <!-- Sticky Note Item 2: About Me -->
+    <div class="sticky-note" id="about-me">
+      <div class="section-header">About Me</div>
+      <div class="section-details">
+        <p>I'm a passionate web developer focused on building clean, responsive websites. I specialize in front-end development and enjoy creating intuitive user interfaces. Currently, I'm expanding my expertise in full-stack development.</p>
+      </div>
+    </div>
+  
+    <!-- Sticky Note Item 3: Awards -->
+    <div class="sticky-note" id="awards">
+      <div class="section-header">Awards</div>
+      <div class="section-details">
+        <h3>Best Project Award</h3>
+        <p>Won the Best Project Award for creating an innovative interactive webpage during a web development bootcamp.</p>
+        <h3>Hackathon Winner</h3>
+        <p>Placed first in the XYZ Hackathon, developing a real-time task management app using React and Firebase.</p>
+      </div>
+    </div>
+  
+    <!-- Sticky Note Item 4: Skills -->
+    <div class="sticky-note" id="skills">
+      <div class="section-header">Skills</div>
+      <div class="section-details">
         <ul>
           <li>HTML, CSS, JavaScript</li>
           <li>React, Node.js, Express</li>
@@ -37,58 +77,114 @@
         </ul>
       </div>
     </div>
-
-    <!-- Extracurricular Activities / Hackathons / Competitions Section -->
-    <div class="timeline-item left extracurricular-section" style="border: 2px solid #2ecc71; padding: 20px; border-radius: 8px; background-color: #eafaf1; color: #2c3e50;">
-      <div class="date" data-date="2024-06-15">Extracurricular Activities</div>
-      <div class="details">
-        <h3>Hackathon Participant</h3>
-        <p>Participated in a 24-hour hackathon, collaborating with a team to build a web app to help students track their study schedules.</p>
+  
+    <!-- Sticky Note Item 5: Contacts -->
+    <div class="sticky-note" id="contacts">
+      <div class="section-header">Contacts</div>
+      <div class="section-details">
+        <ul>
+          <li>Email: lucas@example.com</li>
+          <li>LinkedIn: linkedin.com/in/lucasreed</li>
+          <li>GitHub: github.com/lucasreed</li>
+        </ul>
       </div>
     </div>
-
-    <!-- Awards / Achievements Section -->
-    <div class="timeline-item right awards-section" style="border: 2px solid #f39c12; padding: 20px; border-radius: 8px; background-color: #fff3e6; color: #2c3e50;">
-      <div class="date" data-date="2024-09-20">Awards & Achievements</div>
-      <div class="details">
-        <h3>Best Project Award</h3>
-        <p>Won the Best Project Award for creating an innovative interactive webpage at my school's tech fair.</p>
-      </div>
-    </div>
-
-   <!-- Projects Section Header -->
-<div class="timeline-section projects-header" style="background-color: #f39c12; color: white; text-align: center; padding: 20px; border-radius: 8px;">
-  <h2>Projects</h2>
-</div>
-
-    <!-- Timeline Item 1 (Project) -->
-    <div class="timeline-item right project-section">
-      <div class="date" data-date="2024-08-05">August 5, 2024</div>
-      <div class="details">
-        <h3>Started Learning JavaScript</h3>
-        <p>Dived into JavaScript to add interactivity to my websites.</p>
-      </div>
-      <div class="optional-media">
-        <img src="https://i.ibb.co/nrjQFC2/image-placholder.png" alt="Optional Media 3">
-      </div>
-    </div>
-
-    <!-- Timeline Item 2 (Project) -->
-    <div class="timeline-item left project-section">
-      <div class="date" data-date="2024-12-01">December 1, 2020</div>
-      <div class="details">
-        <h3>Built First Interactive Webpage</h3>
-        <p>Created a to-do list app using HTML, CSS, and JavaScript.</p>
-      </div>
-      <div class="optional-media">
-        <img src="https://i.ibb.co/nrjQFC2/image-placholder.png" alt="Optional Media 4">
-      </div>
-    </div>
-
-    <!-- More Projects would follow here -->
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
+  </div> <!-- End of Sticky Notes Grid -->
+  
+ 
+ <!-- ***********************************************************************
+  * Timeline Section
+  *********************************************************************** -->
+   <div id="timeline" class="timeline">
+     <!-- Featured Projects Header Section -->
+     <div class="projects-header">
+       <h2>Featured Projects</h2>
+     </div>
+ 
+     <!-- Featured Project Item 1 -->
+     <div class="timeline-item project-section">
+       <div class="date">August 5, 2024</div>
+       <div class="details">
+         <h3>Started Learning JavaScript</h3>
+         <p>Dived into JavaScript to add interactivity to my websites.</p>
+         <img src="https://i.ibb.co/nrjQFC2/image-placholder.png" alt="JavaScript Learning Image">
+       </div>
+     </div>
+ 
+     <!-- Featured Project Item 2 -->
+     <div class="timeline-item project-section">
+       <div class="date">December 1, 2024</div>
+       <div class="details">
+         <h3>Built First Interactive Webpage</h3>
+         <p>Created a to-do list app using HTML, CSS, and JavaScript.</p>
+         <img src="https://i.ibb.co/nrjQFC2/image-placholder.png" alt="To-Do List App">
+       </div>
+     </div>
+ 
+     <!-- Projects Header Section -->
+     <div class="projects-header">
+       <h2>Timeline</h2>
+     </div>
+ 
+     <!-- Internship Section -->
+     <div class="timeline-item internship-section">
+       <div class="date">June 10, 2025</div>
+       <div class="details">
+         <h3>Summer Internship at XYZ Company</h3>
+         <p>Worked as a web development intern, contributing to the design of user interfaces and implementing backend functionality.</p>
+       </div>
+     </div>
+ 
+     <!-- Certifications Section -->
+     <div class="timeline-item certifications-section">
+       <div class="date">August 15, 2025</div>
+       <div class="details">
+         <h3>Certified in Full-Stack Development</h3>
+         <p>Completed a comprehensive course and received certification in Full-Stack Web Development.</p>
+       </div>
+     </div>
+ 
+     <!-- Personal Project Section -->
+     <div class="timeline-item personal-project-section">
+       <div class="date">October 5, 2025</div>
+       <div class="details">
+         <h3>Personal Project: Blog Website</h3>
+         <p>Built a blog website from scratch using React and Node.js to share programming tutorials.</p>
+       </div>
+     </div>
+ 
+     <!-- Final Project Section -->
+     <div class="timeline-item final-project-section">
+       <div class="date">December 20, 2025</div>
+       <div class="details">
+         <h3>Final Project: Job Listing Platform</h3>
+         <p>Developed a full-stack job listing platform using MongoDB, Express, React, and Node.js.</p>
+       </div>
+     </div>
+   </div>
+ 
+ <!-- ***********************************************************************
+  * Footer Section
+  *********************************************************************** -->
+   <footer id="footer">
+     <div class="footer-content">
+       <p>© 2024 Lucas Reed. All rights reserved.</p>
+     </div>
+   </footer>
+   
+   <script src="scrollanimation.js"></script>
+   <script>
+     // Smooth scroll script
+     const navLinks = document.querySelectorAll('.navbar-links a');
+     
+     navLinks.forEach(link => {
+       link.addEventListener('click', function(event) {
+         event.preventDefault(); // Prevent default anchor behavior
+         const targetSection = document.querySelector(this.getAttribute('href'));
+         targetSection.scrollIntoView({ behavior: 'smooth' });
+       });
+     });
+   </script>
+ </body>
+ </html>
+ 
