@@ -15,9 +15,9 @@
      <nav class="navbar">
        <ul class="navbar-links">
          <li><a href="#cover">Home</a></li>
-         <li><a href="#sticky-notes-grid">Sticky Notes</a></li>
+         <li><a href="#sticky-notes-grid" data-offset="100">My Snapshot</a></li>
          <li><a href="#timeline">Featured Projects</a></li>
-         <li><a href="#footer">Timeline</a></li>
+         <li><a href="#footer" data-offset="50">Timeline</a></li>
        </ul>
      </nav>
    </header>
@@ -166,25 +166,13 @@
  <!-- ***********************************************************************
   * Footer Section
   *********************************************************************** -->
-   <footer id="footer">
+ <footer id="footer">
      <div class="footer-content">
        <p>© 2024 Lucas Reed. All rights reserved.</p>
      </div>
    </footer>
    
    <script src="scrollanimation.js"></script>
-   <script>
-     // Smooth scroll script
-     const navLinks = document.querySelectorAll('.navbar-links a');
-     
-     navLinks.forEach(link => {
-       link.addEventListener('click', function(event) {
-         event.preventDefault(); // Prevent default anchor behavior
-         const targetSection = document.querySelector(this.getAttribute('href'));
-         targetSection.scrollIntoView({ behavior: 'smooth' });
-       });
-     });
-   </script>
  </body>
  </html>
  
