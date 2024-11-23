@@ -122,7 +122,7 @@ body {
 /***********************************************************************
  * Header Bar Styling
  ***********************************************************************/
- header {
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -136,7 +136,8 @@ body {
 .navbar {
   display: flex;
   justify-content: center; 
-  align-items: center;   
+  align-items: center;
+  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -149,7 +150,7 @@ body {
 .navbar-links a {
   color: #fff;
   font-family: 'Impact', sans-serif;
-  font-size: 1rem; 
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
@@ -158,18 +159,43 @@ body {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
+.navbar-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: space-between; 
+  }
+
   .navbar-links {
-    flex-direction: column; 
-    align-items: center; 
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .navbar-links.active {
+    display: flex; 
+  }
+
+  .navbar-toggle {
+    display: block; 
   }
 
   .navbar-links a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 15px 25px;
+    width: 100%; 
+    text-align: center;
   }
 }
-
 
 /***********************************************************************
  * Sticky Note Grid Styling
