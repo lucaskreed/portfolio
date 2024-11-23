@@ -233,74 +233,115 @@ footer p {
 /***********************************************************************
  * Sticky Notes Grid Specifying Styling
  ***********************************************************************/
- .sticky-notes-grid {
+/* Sticky Notes Grid */
+.sticky-notes-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
   position: absolute;
-  margin-top: 1150px;
+  margin-top: 1000px;
   z-index: 3;
-  max-width: 1400px;
+  max-width: 1600px;
   width: 100%;
   margin-bottom: 60px;
   padding: 50px;
 }
 
+/* Sticky Note */
 .sticky-note {
-  background: linear-gradient(145deg, #fffb88, #ffdd44);
+  background: linear-gradient(145deg, #fffb88, #ffdd44); /* Same color as previous sticky note */
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   width: calc(33% - 40px); /* Default size for desktop */
   position: relative;
-  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out; 
-  border: 4px solid transparent; 
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  border: 4px solid transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .sticky-note:hover {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  border: 4px dashed #ff9d00; 
+  border: 4px dashed #ff9d00;
 }
 
+/* Goals Styling (Separate from Sticky Note) */
+.goals-header {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #ff6b00; /* Custom color for goals section header */
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.goals-details {
+  font-size: 1.1em;
+  color: #444; /* Dark color for better readability */
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+}
+
+.goals-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.goals-list li {
+  margin-bottom: 10px;
+  color: #2a2a2a; /* Slightly darker color for list items */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.goals-list .circle {
+  width: 15px;
+  height: 15px;
+  background-color: #ff6b00; /* Circle color */
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* Mobile and tablet responsiveness */
 @media (max-width: 768px) {
   .sticky-notes-grid {
-    padding: 50px; 
-    gap: 30px; 
+    padding: 50px;
+    gap: 30px;
     margin-top: 800px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
   }
 
   .sticky-note {
-    width: calc(50% - 30px); 
+    width: calc(50% - 30px);
   }
 
   .sticky-note:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
-    border: 4px solid transparent; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 4px solid transparent;
   }
 }
 
 @media (max-width: 480px) {
   .sticky-notes-grid {
-    padding: 20px; 
-    gap: 20px; 
-    margin-top: 800px;
+    padding: 20px;
+    gap: 20px;
+    margin-top: 850px;
     margin-bottom: 0px;
   }
 
   .sticky-note {
-    width: 100%; 
-    padding: 15px; 
+    width: 100%;
+    padding: 15px;
   }
 
   .sticky-note:hover {
-    box-shadow: none; 
-    border: 4px solid transparent; 
+    box-shadow: none;
+    border: 4px solid transparent;
   }
 }
 
@@ -319,12 +360,29 @@ footer p {
 
 .sticky-note .section-details {
   font-size: 1em;
-  color: #666;
+  color: #662a2a;
   line-height: 1.6;
   letter-spacing: 0.5px;
   margin-top: 15px;
 }
 
+.goals-header {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333; /* Matching color for consistency */
+  margin-bottom: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.goals-details {
+  font-size: 1em;
+  color: #662a2a; /* Slightly darker color to match other sticky notes */
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  margin-top: 15px;
+}
 /***********************************************************************
  * Footer Styling
  ***********************************************************************/
@@ -358,27 +416,6 @@ footer p {
     font-size: 1rem;
   }
 }
-
-/***********************************************************************
- * Header Section Styling
- ***********************************************************************/
-.sticky-note .section-header {
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #333; /* Dark gray for text */
-  margin-bottom: 10px;
-  line-height: 1.4;
-  letter-spacing: 0.5px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15); 
-}
-
-.sticky-note .section-details {
-  font-size: 1em;
-  color: #555; 
-  line-height: 1.6;
-  text-align: justify;
-}
-
 
 /***********************************************************************
  * Responsive Design for Sticky Notes
@@ -529,7 +566,7 @@ footer p {
 @media screen and (max-width: 768px) {
   .timeline {
     padding: 40px;
-    margin-top: 1950px;
+    margin-top: 2600px;
     margin-bottom: 50px;
   }
 
@@ -641,3 +678,15 @@ footer {
   height: auto;
   border-radius: 10px;
 }
+
+/***********************************************************************
+ * Project Section Styling
+ ***********************************************************************/
+ .profile-photo {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  border-radius: 50%; /* Makes the photo circular */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+  margin-bottom: 15px; /* Adds space between the photo and the text */
+}
+
