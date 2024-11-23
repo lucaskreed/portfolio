@@ -245,20 +245,20 @@ footer p {
 }
 
 /***********************************************************************
- * Stick Notes Grid Specifying Styling
+ * Sticky Notes Grid Specifying Styling
  ***********************************************************************/
-.sticky-notes-grid {
+ .sticky-notes-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
   position: absolute;
   margin-top: 1000px;
-  z-index: 3; 
-  max-width: 1200px;
+  z-index: 3;
+  max-width: 1400px;
   width: 100%;
-  margin-bottom: 60px; 
-  padding: 40px;
+  margin-bottom: 60px;
+  padding: 50px;
 }
 
 .sticky-note {
@@ -266,38 +266,52 @@ footer p {
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  width: calc(33% - 40px);
+  width: calc(33% - 40px); /* Default size for desktop */
   position: relative;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: none;
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out; 
+  border: 4px solid transparent; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transform-origin: center;
+  box-sizing: border-box; 
 }
 
 .sticky-note:hover {
-  transform: translateY(-12px) rotate(2deg);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 4px dashed #ff9d00; 
 }
 
-.sticky-note::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-  background-color: #ffdd44;
-  border-radius: 0 0 5px 0;
-  transform: rotate(45deg);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+@media (max-width: 768px) {
+  .sticky-notes-grid {
+    padding: 50px; 
+    gap: 30px; 
+  }
+
+  .sticky-note {
+    width: calc(50% - 30px); 
+  }
+
+  .sticky-note:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    border: 4px solid transparent; 
+  }
 }
 
-.sticky-note:hover::before {
-  opacity: 1;
+@media (max-width: 480px) {
+  .sticky-notes-grid {
+    padding: 20px; 
+    gap: 20px; 
+  }
+
+  .sticky-note {
+    width: 100%; 
+    padding: 15px; 
+  }
+
+  .sticky-note:hover {
+    box-shadow: none; 
+    border: 4px solid transparent; 
+  }
 }
 
 /***********************************************************************
@@ -354,70 +368,6 @@ footer p {
     font-size: 1rem;
   }
 }
-
-
-/***********************************************************************
- * Sticky Notes Grid
- ***********************************************************************/
-.sticky-notes-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  gap: 30px;
-  position: absolute;
-  margin-top: 1000px; 
-  z-index: 3;
-  max-width: 1200px;
-  width: 100%;
-  margin-bottom: 60px;
-  padding: 40px;
-}
-
-
-/***********************************************************************
- * Sticky Note Styling
- ***********************************************************************/
-.sticky-note {
-  background: linear-gradient(145deg, #fffb88, #ffdd44); 
-  padding: 25px;
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
-  width: calc(33% - 40px); 
-  position: relative;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-  border: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform-origin: center; 
-}
-
-
-.sticky-note:hover {
-  transform: translateY(-12px) rotate(2deg); 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); 
-}
-
-
-.sticky-note::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-  background-color: #ffdd44; 
-  border-radius: 0 0 5px 0;
-  transform: rotate(45deg);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.sticky-note:hover::before {
-  opacity: 1; 
-}
-
 
 /***********************************************************************
  * Header Section Styling
@@ -656,13 +606,14 @@ footer {
 .projects-header {
   background: #333;
   color: #fff;
-  padding: 30px 50px;
+  padding: 30px 60px;
   text-align: center;
   font-size: 32px;
   font-weight: 500;
   border-radius: 8px;
   box-shadow: none;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-top: 50px;
   max-width: 1200px;
   width: 100%;
   position: relative;
@@ -678,7 +629,6 @@ footer {
   }
 }
 
-
 /***********************************************************************
  * Project Section Styling
  ***********************************************************************/
@@ -689,6 +639,9 @@ footer {
   border-radius: 12px;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease-in-out;
+  width: 90%; /* Make the section smaller by 10% */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-section:hover {
