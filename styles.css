@@ -24,7 +24,7 @@ body {
               linear-gradient(90deg, transparent 24px, rgba(0, 0, 0, 0.05) 25px);
   background-color: #f9f9f9;
   background-size: 25px 25px;
-  padding-top: 80px; /* Adjust for header space */
+  padding-top: 80px; 
 }
 
 /***********************************************************************
@@ -122,7 +122,7 @@ body {
 /***********************************************************************
  * Header Bar Styling
  ***********************************************************************/
-header {
+ header {
   position: fixed;
   top: 0;
   left: 0;
@@ -135,7 +135,9 @@ header {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: center; 
+  align-items: center;   
+  flex-wrap: wrap;
 }
 
 .navbar-links {
@@ -144,50 +146,70 @@ header {
   gap: 20px;
 }
 
-.navbar-links li {
-  display: inline;
-}
-
 .navbar-links a {
   color: #fff;
   font-family: 'Impact', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem; 
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.navbar-links a:hover {
-  background-color: #ffab00;
-  transform: scale(1.1);
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .navbar-links a {
+    font-size: 1rem;
+    padding: 15px 25px;
+  }
 }
+
 
 /***********************************************************************
  * Sticky Note Grid Styling
  ***********************************************************************/
 .sticky-notes-grid {
-  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  position: absolute;
+  margin-top: 1000px;
+  z-index: 3;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 40px;
 }
 
 .sticky-note {
-  background-color: #ffab00;
-  color: black;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #fffb88, #ffdd44);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: calc(33% - 40px); /* Default width for desktop */
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none;
 }
 
-.sticky-note .section-header {
-  font-weight: bold;
-  font-size: 1.5rem;
+
+@media screen and (max-width: 768px) {
+  .sticky-note {
+    width: calc(50% - 40px); 
+  }
 }
 
-.sticky-note .section-details {
-  margin-top: 10px;
+@media screen and (max-width: 480px) {
+  .sticky-note {
+    width: 100%; 
+  }
 }
 
 /***********************************************************************
@@ -341,10 +363,10 @@ footer p {
 .sticky-notes-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center the sticky notes */
+  justify-content: center; 
   gap: 30px;
   position: absolute;
-  margin-top: 1000px; /* Adjust position above the timeline */
+  margin-top: 1000px; 
   z-index: 3;
   max-width: 1200px;
   width: 100%;
@@ -357,27 +379,27 @@ footer p {
  * Sticky Note Styling
  ***********************************************************************/
 .sticky-note {
-  background: linear-gradient(145deg, #fffb88, #ffdd44); /* Sticky note color gradient */
+  background: linear-gradient(145deg, #fffb88, #ffdd44); 
   padding: 25px;
   border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Larger shadow for 3D effect */
-  width: calc(33% - 40px); /* Adjusted width with margin */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+  width: calc(33% - 40px); 
   position: relative;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
   border: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transform-origin: center; /* Ensure proper 3D effect on hover */
+  transform-origin: center; 
 }
 
-/* Sticky Note Hover Effect */
+
 .sticky-note:hover {
-  transform: translateY(-12px) rotate(2deg); /* Slight lift with rotation for 3D feel */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: translateY(-12px) rotate(2deg); 
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); 
 }
 
-/* Adding the 'peel' effect on hover */
+
 .sticky-note::before {
   content: "";
   position: absolute;
@@ -385,16 +407,16 @@ footer p {
   right: 10px;
   width: 20px;
   height: 20px;
-  background-color: #ffdd44; /* Match sticky note color */
+  background-color: #ffdd44; 
   border-radius: 0 0 5px 0;
   transform: rotate(45deg);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Slight shadow for peel effect */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
 
 .sticky-note:hover::before {
-  opacity: 1; /* Show peel effect on hover */
+  opacity: 1; 
 }
 
 
@@ -408,13 +430,13 @@ footer p {
   margin-bottom: 10px;
   line-height: 1.4;
   letter-spacing: 0.5px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15); /* Light shadow for more depth */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15); 
 }
 
 /* Section Details Styling */
 .sticky-note .section-details {
   font-size: 1em;
-  color: #555; /* Medium gray for text */
+  color: #555; 
   line-height: 1.6;
   text-align: justify;
 }
@@ -597,15 +619,14 @@ body {
   width: 12px;
 }
 
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-  border-radius: 10px;
+::-webkit-scrollbar {
+  width: 8px; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3498db;
-  border-radius: 10px;
-  border: 2px solid #2980b9;
+  background-color: #3498db; 
+  border-radius: 10px;       
+  border: 2px solid #2980b9; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
