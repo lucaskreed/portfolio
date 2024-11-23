@@ -1,6 +1,3 @@
-/***********************************************************************
- * Handle scroll event to trigger timeline animations
- ***********************************************************************/
 function handleScroll() {
   const items = document.querySelectorAll('.timeline-item');
   const triggerPoint = window.innerHeight / 1;  
@@ -26,9 +23,6 @@ window.addEventListener('load', handleScroll);
 
 handleScroll();
 
-/***********************************************************************
- * Navbar smooth scroll behavior
- ***********************************************************************/
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.navbar-links a');
 
@@ -76,9 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/***********************************************************************
- * Navbar Mobile Menu Toggle Behavior
- ***********************************************************************/
 const navbarToggle = document.getElementById('navbar-toggle');
 const navbarLinks = document.getElementById('navbar-links');
 
@@ -86,9 +77,6 @@ navbarToggle.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
 });
 
-/***********************************************************************
- * Copy Socials
- ***********************************************************************/
 function copyToClipboard(contactId) {
   const textToCopy = document.getElementById(contactId).textContent.trim();
   const feedbackElement = document.getElementById(contactId + '-feedback');
@@ -112,9 +100,6 @@ function showFeedback(feedbackElement, message, status) {
   }, 500);
 }
 
-/***********************************************************************
- * Recent Achievements
- ***********************************************************************/
 document.getElementById('toggle-btn').addEventListener('click', function() {
   var recentAchievements = document.getElementById('recent-achievements');
   var oldAchievements = document.getElementById('old-achievements');
