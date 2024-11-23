@@ -85,3 +85,51 @@ const navbarLinks = document.getElementById('navbar-links');
 navbarToggle.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
 });
+
+/***********************************************************************
+ * Copy Socials
+ ***********************************************************************/
+function copyToClipboard(contactId) {
+  const textToCopy = document.getElementById(contactId).textContent.trim();
+  const feedbackElement = document.getElementById(contactId + '-feedback');
+  
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    showFeedback(feedbackElement, "Copy Successful!", "success");
+  }).catch(() => {
+    showFeedback(feedbackElement, "Copy Failed!", "error");
+  });
+}
+
+function showFeedback(feedbackElement, message, status) {
+  feedbackElement.textContent = message;
+  feedbackElement.classList.remove('success', 'error');
+  feedbackElement.classList.add(status);
+  
+  feedbackElement.style.display = 'block';
+  
+  setTimeout(() => {
+    feedbackElement.style.display = 'none';
+  }, 500);
+}
+
+/***********************************************************************
+ * Recent Achievements
+ ***********************************************************************/
+document.getElementById('toggle-btn').addEventListener('click', function() {
+  var recentAchievements = document.getElementById('recent-achievements');
+  var oldAchievements = document.getElementById('old-achievements');
+  var header = document.getElementById('achievements-header');
+  var button = document.getElementById('toggle-btn');
+
+  if (recentAchievements.style.display === "none") {
+    recentAchievements.style.display = "block";
+    oldAchievements.style.display = "none";
+    header.textContent = "Recent Achievements"; 
+    button.textContent = "View Older Achievements";  
+  } else {
+    recentAchievements.style.display = "none";
+    oldAchievements.style.display = "block";
+    header.textContent = "Old Achievements"; 
+    button.textContent = "View Recent Achievements";  
+  }
+});
