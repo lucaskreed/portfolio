@@ -233,28 +233,26 @@ footer p {
 /***********************************************************************
  * Sticky Notes Grid Specifying Styling
  ***********************************************************************/
-/* Sticky Notes Grid */
 .sticky-notes-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  gap: 30px; 
   position: absolute;
-  margin-top: 1000px;
+  margin-top: 850px;
   z-index: 3;
   max-width: 1600px;
   width: 100%;
   margin-bottom: 60px;
-  padding: 50px;
+  padding: 20px; 
 }
 
-/* Sticky Note */
 .sticky-note {
-  background: linear-gradient(145deg, #fffb88, #ffdd44); /* Same color as previous sticky note */
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  width: calc(33% - 40px); /* Default size for desktop */
+  background: linear-gradient(145deg, #fffb88, #ffdd44); 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  width: calc(33% - 30px); 
   position: relative;
   transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
   border: 4px solid transparent;
@@ -265,59 +263,58 @@ footer p {
 }
 
 .sticky-note:hover {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
   border: 4px dashed #ff9d00;
 }
 
-/* Goals Styling (Separate from Sticky Note) */
 .goals-header {
-  font-size: 1.4em;
+  font-size: 1.2em; 
   font-weight: bold;
-  color: #ff6b00; /* Custom color for goals section header */
-  margin-bottom: 12px;
+  color: #ff6b00; 
+  margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .goals-details {
-  font-size: 1.1em;
-  color: #444; /* Dark color for better readability */
-  line-height: 1.7;
+  font-size: 1em; 
+  color: #444; 
+  line-height: 1.5; 
   letter-spacing: 0.5px;
 }
 
 .goals-list {
   list-style-type: none;
   padding-left: 0;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .goals-list li {
-  margin-bottom: 10px;
-  color: #2a2a2a; /* Slightly darker color for list items */
+  margin-bottom: 8px; 
+  color: #2a2a2a; 
   font-weight: 500;
   display: flex;
   align-items: center;
 }
 
 .goals-list .circle {
-  width: 15px;
-  height: 15px;
-  background-color: #ff6b00; /* Circle color */
+  width: 12px; 
+  height: 12px; 
+  background-color: #ff6b00; 
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 10px; 
 }
 
-/* Mobile and tablet responsiveness */
 @media (max-width: 768px) {
   .sticky-notes-grid {
-    padding: 50px;
-    gap: 30px;
+    padding: 20px; 
+    gap: 20px; 
     margin-top: 800px;
     margin-bottom: 20px;
   }
 
   .sticky-note {
-    width: calc(50% - 30px);
+    width: calc(50% - 20px); 
   }
 
   .sticky-note:hover {
@@ -328,15 +325,15 @@ footer p {
 
 @media (max-width: 480px) {
   .sticky-notes-grid {
-    padding: 20px;
-    gap: 20px;
+    padding: 10px; 
+    gap: 15px; 
     margin-top: 850px;
     margin-bottom: 0px;
   }
 
   .sticky-note {
-    width: 100%;
-    padding: 15px;
+    width: 100%; 
+    padding: 10px; 
   }
 
   .sticky-note:hover {
@@ -358,7 +355,7 @@ footer p {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-.sticky-note .section-details {
+.sticky-note {
   font-size: 1em;
   color: #662a2a;
   line-height: 1.6;
@@ -369,7 +366,7 @@ footer p {
 .goals-header {
   font-size: 1.3em;
   font-weight: bold;
-  color: #333; /* Matching color for consistency */
+  color: #333; 
   margin-bottom: 10px;
   line-height: 1.4;
   letter-spacing: 0.5px;
@@ -378,11 +375,67 @@ footer p {
 
 .goals-details {
   font-size: 1em;
-  color: #662a2a; /* Slightly darker color to match other sticky notes */
+  color: #662a2a; 
   line-height: 1.6;
   letter-spacing: 0.5px;
   margin-top: 15px;
 }
+
+.skills-note {
+  background: linear-gradient(145deg, #fffb88, #ffdd44);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skills-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;  /* Add this line to center the text */
+}
+
+.skills-details {
+  width: 100%;
+}
+
+
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left; 
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #444;
+  display: block; 
+  padding-left: 20px; 
+}
+
+.skills-icon {
+  font-size: 1.2em;
+  color: #ff6b00;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+.skills-icon {
+  font-size: 1.2em;
+  color: #ff6b00;
+  margin-right: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 /***********************************************************************
  * Footer Styling
  ***********************************************************************/
@@ -398,7 +451,6 @@ footer p {
   font-size: 1.1rem;
   font-weight: 600;
 }
-
 
 /***********************************************************************
  * Responsive Design
@@ -432,7 +484,6 @@ footer p {
   }
 }
 
-
 /***********************************************************************
  * Timeline Styling
  ***********************************************************************/
@@ -442,7 +493,7 @@ footer p {
   max-width: 1200px;
   padding: 0;
   padding-bottom: 100px;
-  margin-top: 2000px;
+  margin-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -557,16 +608,13 @@ footer p {
 .timeline-item:nth-child(11) .date { background-color: #D35400; }
 .timeline-item:nth-child(12) .date { background-color: #2980B9; }
 
-
-
-
 /***********************************************************************
  * Responsive Design for Timeline
  ***********************************************************************/
 @media screen and (max-width: 768px) {
   .timeline {
     padding: 40px;
-    margin-top: 2600px;
+    margin-top: 0px;
     margin-bottom: 50px;
   }
 
@@ -582,7 +630,6 @@ footer p {
     margin-bottom: 15px;
   }
 }
-
 
 /***********************************************************************
  * Custom Scrollbar Styling
@@ -609,7 +656,6 @@ body {
   background-color: #2980b9;
 }
 
-
 /***********************************************************************
  * Footer (Fixed Position)
  ***********************************************************************/
@@ -623,7 +669,6 @@ footer {
   padding: 20px;
   z-index: 10;
 }
-
 
 /***********************************************************************
  * Projects Section Header
@@ -683,10 +728,349 @@ footer {
  * Project Section Styling
  ***********************************************************************/
  .profile-photo {
-  width: 100px; /* Adjust the width as needed */
-  height: 100px; /* Adjust the height as needed */
-  border-radius: 50%; /* Makes the photo circular */
-  object-fit: cover; /* Ensures the image covers the space without distortion */
-  margin-bottom: 15px; /* Adds space between the photo and the text */
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 15px; 
+}
+
+/***********************************************************************
+ * Contact Section Styling
+ ***********************************************************************/
+ .contact-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;  
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;  
+  padding: 8px 12px;  
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+.contact-link i {
+  margin-right: 8px;  
+  font-size: 1.1em; 
+}
+
+.contact-info {
+  font-size: 0.85em;  
+  color: #555;
+  margin-left: 8px;
+}
+
+.contact-link:hover {
+  background-color: #ffdd44;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link.email:hover {
+  background-color: #ff6b6b;
+}
+
+.contact-link.linkedin:hover {
+  background-color: #0a66c2;
+}
+
+.contact-link.github:hover {
+  background-color: #24292f;
+}
+
+.contact-link.instagram:hover {
+  background-color: #e4405f;
+}
+
+.contact-link.email i {
+  color: #ff6b6b;
+}
+
+.contact-link.linkedin i {
+  color: #0a66c2;
+}
+
+.contact-link.github i {
+  color: #24292f;
+}
+
+.contact-link.instagram i {
+  color: #e4405f;
+}
+
+.contact-link.email:hover i {
+  color: #fff;
+}
+
+.contact-link.linkedin:hover i {
+  color: #fff;
+}
+
+.contact-link.github:hover i {
+  color: #fff;
+}
+
+.contact-link.instagram:hover i {
+  color: #fff;
+}
+
+/***********************************************************************
+ * Copy Socials
+ ***********************************************************************/
+ .copy-btn {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 1.1em;  /* Slightly reduced size */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-left: 8px;  
+  display: inline-flex;
+  align-items: center;
+}
+
+.copy-btn:hover {
+  color: #ff6b6b;
+}
+
+.copy-btn i {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;  
+  justify-content: space-between;  
+}
+
+ul li .contact-info {
+  font-size: 1em;  
+  flex-grow: 1; 
+}
+
+.copy-feedback {
+  display: none; 
+  font-size: 0.9em;
+  color: #ff6b6b;
+  margin-left: 10px;
+  text-align: right;
+  min-width: 100px; 
+  font-weight: bold;
+}
+
+.copy-feedback.success {
+  color: #28a745; 
+
+.copy-feedback.failed {
+  color: #dc3545; 
+}
+}
+
+/***********************************************************************
+ * Achievements Sticky Note Styling
+ ***********************************************************************/
+ .achievements-note {
+  background: linear-gradient(145deg, #fffb88, #ffdd44);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  width: calc(33% - 30px);
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  border: 4px solid transparent;
+  box-sizing: border-box;
+}
+
+.achievements-note:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  border: 4px dashed #ff9d00;
+}
+
+.section-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ff6b00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;  
+  transition: all 0.3s ease;
+}
+
+.recent-achievements {
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;  
+}
+
+.recent-achievements ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.recent-achievements li {
+  font-size: 1.1em;
+  color: #444;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.recent-achievements a {
+  color: #ff6b00;  
+  text-decoration: none;
+  margin-top: 8px;
+  display: block;
+  font-weight: bold;  
+  transition: color 0.3s ease, transform 0.3s ease;  
+}
+
+.recent-achievements a:hover {
+  text-decoration: underline;
+  color: #ffffff; 
+  background-color: #ff6b00;  
+  padding: 0px;
+  border-radius: 5px;  
+  transform: scale(1.05);  
+}
+
+
+.old-achievements {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: none; 
+  max-height: 200px;
+  overflow-y: auto;  
+  margin-top: 15px;
+}
+
+.old-achievements p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.timestamp {
+  color: #00ff00; 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+
+.toggle-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.toggle-btn:hover {
+  background-color: #45a049;
+}
+
+.toggle-btn:focus {
+  outline: none;
+}
+
+/***********************************************************************
+ * Media Queries for Responsiveness
+ ***********************************************************************/
+
+@media (max-width: 768px) {
+  .achievements-note {
+    width: calc(50% - 20px);
+    padding: 20px;
+  }
+
+  .section-header {
+    font-size: 1.3em;
+  }
+
+  .recent-achievements li {
+    font-size: 1em;
+  }
+
+  .toggle-btn {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-note {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .section-header {
+    font-size: 1.2em;
+  }
+
+  .recent-achievements li {
+    font-size: 0.9em;
+  }
+
+  .toggle-btn {
+    padding: 8px 12px;
+  }
+}
+
+/***********************************************************************
+ * Old Achievements Terminal Style
+ ***********************************************************************/
+.timestamp {
+  color: #FF4500; 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+
+.old-achievements {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px; 
+}
+
+.toggle-btn {
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  border: none;
+}
+
+.toggle-btn:hover {
+  background-color: #555;
+}
+
+/***********************************************************************
+ * .skills-section-header
+ ***********************************************************************/
+.skills-section-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  display: block; 
+  text-align: center; 
+  width: 100%; 
 }
 
