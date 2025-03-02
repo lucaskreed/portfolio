@@ -767,11 +767,11 @@
     color: #fff;
   }
   
-   .copy-btn {
+  .copy-btn {
     background-color: transparent;
     border: none;
     color: #333;
-    font-size: 1.1em;  /* Slightly reduced size */
+    font-size: 1.1em;  
     cursor: pointer;
     transition: color 0.3s ease;
     margin-left: 8px;  
@@ -785,6 +785,24 @@
   
   .copy-btn i {
     margin: 0;
+  }
+  
+  .copy-feedback {
+    display: none; 
+    font-size: 0.9em;
+    color: #ff6b6b;
+    margin-left: 10px;
+    text-align: right;
+    min-width: 100px; 
+    font-weight: bold;
+  }
+  
+  .copy-feedback.success {
+    color: #28a745; 
+  }
+  
+  .copy-feedback.failed {
+    color: #dc3545;  
   }
   
   ul {
@@ -803,24 +821,6 @@
   ul li .contact-info {
     font-size: 1em;  
     flex-grow: 1; 
-  }
-  
-  .copy-feedback {
-    display: none; 
-    font-size: 0.9em;
-    color: #ff6b6b;
-    margin-left: 10px;
-    text-align: right;
-    min-width: 100px; 
-    font-weight: bold;
-  }
-  
-  .copy-feedback.success {
-    color: #28a745; 
-  
-  .copy-feedback.failed {
-    color: #dc3545; 
-  }
   }
   
    .achievements-note {
