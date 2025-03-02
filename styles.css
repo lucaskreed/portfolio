@@ -124,7 +124,7 @@
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    position: relative; /* Ensure proper stacking context */
+    position: relative; 
   }
   
   .navbar-links {
@@ -145,21 +145,19 @@
     transition: background 0.3s ease, transform 0.3s ease;
   }
   
-  /* Toggle button styles */
   .navbar-toggle {
     display: none;
-    font-size: 2rem;
+    font-size: 3rem;
     background: none;
     border: none;
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
-    position: absolute;  /* Fix position for mobile view */
-    top: 20px; /* Adjust this value if needed */
-    right: 20px; /* Adjust this value if needed */
-    z-index: 10; /* Ensure it's above other content */
+    position: absolute;  
+    top: 20px; 
+    right: 20px; 
+    z-index: 10; 
   }
   
-  /* Mobile responsive view */
   @media screen and (max-width: 768px) {
     .navbar {
       justify-content: space-between; 
@@ -172,9 +170,9 @@
       width: 100%;
       padding: 0;
       position: absolute;
-      top: 80px; /* Adjust for space between navbar and links */
-      background-color: rgba(0, 0, 0, 0.8); /* Background color for dropdown */
-      z-index: 9; /* Ensure it appears above other content */
+      top: 80px; 
+      background-color: rgba(0, 0, 0, 0.8); 
+      z-index: 9; /
     }
   
     .navbar-links.active {
