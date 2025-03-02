@@ -86,8 +86,16 @@ document.addEventListener('DOMContentLoaded', () => {
     feedbackElement.style.display = 'block';
     setTimeout(() => {
       feedbackElement.style.display = 'none';
-    }, 500);
+    }, 1500); 
   }
+
+  const copyButtons = document.querySelectorAll('.copy-btn');
+  copyButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const contactId = this.getAttribute('data-target');
+      copyToClipboard(contactId);
+    });
+  });
 
   document.getElementById('toggle-btn').addEventListener('click', function() {
     var recentAchievements = document.getElementById('recent-achievements');
