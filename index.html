@@ -105,40 +105,41 @@
 
 <!-- Sticky Note Item 5: Contacts -->
 <div class="sticky-note" id="contacts">
- <div class="section-header">Contacts</div>
- <div class="section-details">
-   <ul>
-     <li>
-       <a href="mailto:lucasreed.dev@gmail.com" class="contact-link" target="_blank">
-         <i class="fa-solid fa-envelope"></i> Email: <span class="contact-info" id="email">lucasreed.dev</span>
-       </a>
-       <button class="copy-btn" onclick="copyToClipboard('email')"><i class="fa-solid fa-copy"></i></button>
-       <div class="copy-feedback" id="email-feedback"></div> 
-     </li>
-     <li>
-       <a href="https://www.linkedin.com/in/lucas-reed-755443339/" class="contact-link" target="_blank">
-         <i class="fa-brands fa-linkedin"></i> LinkedIn: <span class="contact-info" id="linkedin">Lucas Reed</span>
-       </a>
-       <button class="copy-btn" onclick="copyToClipboard('linkedin')"><i class="fa-solid fa-copy"></i></button>
-       <div class="copy-feedback" id="linkedin-feedback"></div> 
-     </li>
-     <li>
-       <a href="https://github.com/lucasreed1" class="contact-link" target="_blank">
-         <i class="fa-brands fa-github"></i> GitHub: <span class="contact-info" id="github">lucasreed1</span>
-       </a>
-       <button class="copy-btn" onclick="copyToClipboard('github')"><i class="fa-solid fa-copy"></i></button>
-       <div class="copy-feedback" id="github-feedback"></div> 
-     </li>
-     <li>
-       <a href="https://www.instagram.com/lucasreed_/" class="contact-link" target="_blank">
-         <i class="fa-brands fa-instagram"></i> Instagram: <span class="contact-info" id="instagram">lucasreed_</span>
-       </a>
-       <button class="copy-btn" onclick="copyToClipboard('instagram')"><i class="fa-solid fa-copy"></i></button>
-       <div class="copy-feedback" id="instagram-feedback"></div> 
-     </li>
-   </ul>
- </div>
+  <div class="section-header">Contacts</div>
+  <div class="section-details">
+    <ul>
+      <li>
+        <a href="mailto:lucasreed.dev@gmail.com" class="contact-link" target="_blank">
+          <i class="fa-solid fa-envelope"></i> Email: <span class="contact-info" id="email">lucasreed.dev</span>
+        </a>
+        <button class="copy-btn" data-target="email"><i class="fa-solid fa-copy"></i></button>
+        <div class="copy-feedback" id="email-feedback"></div> 
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/lucas-reed-755443339/" class="contact-link" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn: <span class="contact-info" id="linkedin">Lucas Reed</span>
+        </a>
+        <button class="copy-btn" data-target="linkedin"><i class="fa-solid fa-copy"></i></button>
+        <div class="copy-feedback" id="linkedin-feedback"></div> 
+      </li>
+      <li>
+        <a href="https://github.com/lucasreed1" class="contact-link" target="_blank">
+          <i class="fa-brands fa-github"></i> GitHub: <span class="contact-info" id="github">lucasreed1</span>
+        </a>
+        <button class="copy-btn" data-target="github"><i class="fa-solid fa-copy"></i></button>
+        <div class="copy-feedback" id="github-feedback"></div> 
+      </li>
+      <li>
+        <a href="https://www.instagram.com/lucasreed_/" class="contact-link" target="_blank">
+          <i class="fa-brands fa-instagram"></i> Instagram: <span class="contact-info" id="instagram">lucasreed_</span>
+        </a>
+        <button class="copy-btn" data-target="instagram"><i class="fa-solid fa-copy"></i></button>
+        <div class="copy-feedback" id="instagram-feedback"></div> 
+      </li>
+    </ul>
+  </div>
 </div>
+
 
   <div id="timeline" class="timeline">
     <!-- Featured Projects Header Section -->
